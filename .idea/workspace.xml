@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dto/RandomUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/RandomUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CreatedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CreatedUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CreatedUser">
+  <component name="RunManager" selected="JUnit.CreatedUser.toCreateUser">
     <configuration name="CreatedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
@@ -71,8 +69,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CreatedUser" />
         <item itemvalue="JUnit.CreatedUser.toCreateUser" />
+        <item itemvalue="JUnit.CreatedUser" />
       </list>
     </recent_temporary>
   </component>
@@ -85,6 +83,29 @@
       <option name="presentableId" value="Default" />
       <updated>1688050773151</updated>
     </task>
+    <task id="LOCAL-00001" summary="Task done">
+      <created>1688167665776</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688167665776</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Task done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/CreatedUser.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

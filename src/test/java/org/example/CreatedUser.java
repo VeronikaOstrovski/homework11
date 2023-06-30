@@ -29,11 +29,11 @@ public class CreatedUser {
         randomUser.setPhone("+37212345678");
         randomUser.setUserStatus(12);
         randomUserEmpty.setId(25);
-        randomUserEmpty.setUsername("test1");
+        randomUserEmpty.setUsername("test");
         randomUserEmpty.setFirstName(generatedRandomFirstName());
-        randomUserEmpty.setLastName("Ostrov");
-        randomUserEmpty.setEmail("post@gmail.com");
-        randomUserEmpty.setPassword("7654321");
+        randomUserEmpty.setLastName("Ost");
+        randomUserEmpty.setEmail("test@gmail.com");
+        randomUserEmpty.setPassword("12345678");
         randomUserEmpty.setPhone(generatedRandomFirstName());
         randomUserEmpty.setUserStatus(12);
 
