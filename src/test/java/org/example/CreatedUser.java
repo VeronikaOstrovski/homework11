@@ -80,16 +80,16 @@ public class CreatedUser {
     public void toCreateUserDeserialization(){
         RandomUser randomUserEmptyDeserialization = new RandomUser();
         randomUserEmptyDeserialization.setId(8);
-//        randomUserEmptyDeserialization.setUsername("today");
-//        randomUserEmptyDeserialization.setFirstName(generatedRandomFirstName());
-//        randomUserEmptyDeserialization.setLastName("Weekend");
-//        randomUserEmptyDeserialization.setEmail("goodday@gmail.com");
-//        randomUserEmptyDeserialization.setPassword("9876543");
-//        randomUserEmptyDeserialization.setPhone(generatedRandomPhone());
+        randomUserEmptyDeserialization.setUsername("today");
+        randomUserEmptyDeserialization.setFirstName(generatedRandomFirstName());
+        randomUserEmptyDeserialization.setLastName("Weekend");
+        randomUserEmptyDeserialization.setEmail("goodday@gmail.com");
+        randomUserEmptyDeserialization.setPassword("9876543");
+        randomUserEmptyDeserialization.setPhone(generatedRandomPhone());
         randomUserEmptyDeserialization.setUserStatus(2017);
-        randomUserEmptyDeserialization.setCode(HttpStatus.SC_OK);
-        randomUserEmptyDeserialization.setType("unknown");
-        randomUserEmptyDeserialization.setMessage("8");
+//        randomUserEmptyDeserialization.setCode(HttpStatus.SC_OK);
+//        randomUserEmptyDeserialization.setType("unknown");
+//        randomUserEmptyDeserialization.setMessage("8");
 
 
         Gson gsonDeserialization = new Gson();
@@ -115,7 +115,6 @@ public class CreatedUser {
                 () -> assertEquals("8", createdUser.getMessage(), "Third Assert"),
        //         () -> assertNotEquals(generatedRandomPhone(),createdUser.getPhone(),"FourthAssert"),
                 () -> assertNotNull(createdUser.getType(),"Fifth Assert")
-
         );
     }
 
