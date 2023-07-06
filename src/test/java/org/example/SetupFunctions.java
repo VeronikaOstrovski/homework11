@@ -12,53 +12,57 @@ import static io.restassured.RestAssured.given;
 
 public class SetupFunctions {
 
-    String baseUrl;
     String username;
     String password;
+    String baseUrl;
 
-    public SetupFunctions () {
-        try (InputStream input = new FileInputStream("settings.properties")){
+    public SetupFunctions() {
+
+        try (InputStream input = new FileInputStream("settings.properties")) {
             Properties properties = new Properties();
             properties.load(input);
+
             baseUrl = properties.getProperty("baseUrl");
-            username = properties.getProperty("user-v-07");
-            password = properties.getProperty("pwd876543");
+            username = properties.getProperty("username");
+            password = properties.getProperty("password");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public String createUser(){
-        User user = new User (username, password);
-        Gson gson = new Gson();
-        return gson.toJson(user);
-    }
+//    public String createUser(){
+//        User user = new User (username, password);
+//        Gson gson = new Gson();
+//        return gson.toJson(user);
+//    }
+//
+//    public String getBaseUrl (){
+//        return baseUrl;
+//    }
 
-    public String getBaseUrl (){
-        return baseUrl;
-    }
-
-    public String getToken (){
+    public String getToken() {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password);
 
-        return given()
+        Gson gson = new Gson();
+        String credentials = gson.toJson(user);
+
+        String token = given()
                 .header("Content-Type", "application/json")
                 .log()
                 .all()
-                .body(createUser())
+                .body(credentials)
                 .when()
                 .post(baseUrl + "/login/student")
                 .then()
                 .log()
                 .all()
                 .and()
-                .extract ()
-                .response()
+                .extract()
                 .asString();
 
-//        return token;
+        return token;
 
     }
 }

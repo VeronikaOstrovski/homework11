@@ -13,24 +13,25 @@ import java.util.Properties;
 
 public class DeliveryAPITest {
 
-        @BeforeAll
-public static void setUp (){
-     //   System.out.println("---> test start");
+
+    @BeforeAll
+    public static void setUp() {
+        System.out.println("---> test start");
 
         SetupFunctions setupFunctions = new SetupFunctions();
 
-   //     System.out.println("token " + setupFunctions.getToken());
+        System.out.println("token " + setupFunctions.getToken());
 
-   //     String token = setupFunctions.getToken();
+        String token = setupFunctions.getToken();
 
-   //     RestAssured.baseURI = setupFunctions.baseUrl;
+        RestAssured.baseURI = setupFunctions.baseUrl;
 
-//        if (token == null){
-//                Assertions.fail();
+        if (token == null) {
+            Assertions.fail();
         }
-
-    @Test
-    public void createUser (){
-            int a = 1;
     }
-}
+        @Test
+        public void createUser() {
+            int a = 1;
+        }
+    }
