@@ -25,6 +25,7 @@ public class SetupFunctions {
             baseUrl = properties.getProperty("baseUrl");
             username = properties.getProperty("username");
             password = properties.getProperty("password");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
