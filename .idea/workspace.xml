@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 13 done">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dto/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,67 +33,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/veronikaostrovski/IdeaProjects/homework11"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/veronikaostrovski/IdeaProjects/homework11&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryAPITest.createUser">
-    <configuration name="CreatedUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CreatedUser" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreatedUser.toCreateUserDeserialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CreatedUser" />
-      <option name="METHOD_NAME" value="toCreateUserDeserialization" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CreatedUser.toCreateUserSerialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CreatedUser" />
-      <option name="METHOD_NAME" value="toCreateUserSerialization" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeliveryAPITest.createOrder">
+    <configuration name="DeliveryAPITest.createOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -99,12 +56,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="createOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryAPITest.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryAPITest.deleteOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -112,10 +70,57 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
-      <option name="METHOD_NAME" value="createUser" />
+      <option name="METHOD_NAME" value="deleteOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryAPITest.negativeTestOrderHeaderContentTypeGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
+      <option name="METHOD_NAME" value="negativeTestOrderHeaderContentTypeGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryAPITest.negativeTestOrderWithoutTokenGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
+      <option name="METHOD_NAME" value="negativeTestOrderWithoutTokenGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryAPITest.searchCreatedOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
+      <option name="METHOD_NAME" value="searchCreatedOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryAPITest.createUser" />
-        <item itemvalue="JUnit.DeliveryAPITest" />
-        <item itemvalue="JUnit.CreatedUser" />
-        <item itemvalue="JUnit.CreatedUser.toCreateUserDeserialization" />
-        <item itemvalue="JUnit.CreatedUser.toCreateUserSerialization" />
+        <item itemvalue="JUnit.DeliveryAPITest.createOrder" />
+        <item itemvalue="JUnit.DeliveryAPITest.negativeTestOrderHeaderContentTypeGet" />
+        <item itemvalue="JUnit.DeliveryAPITest.negativeTestOrderWithoutTokenGet" />
+        <item itemvalue="JUnit.DeliveryAPITest.deleteOrder" />
+        <item itemvalue="JUnit.DeliveryAPITest.searchCreatedOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -182,14 +187,22 @@
       <option name="project" value="LOCAL" />
       <updated>1688658884869</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values">
+      <created>1688673087643</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688673087643</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task done" />
     <MESSAGE value="Task 12 done" />
     <MESSAGE value="Task 13 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 13 done" />
+    <MESSAGE value="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,28 +219,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="23" />
+          <line>209</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="25" />
+          <line>186</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
+          <line>166</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,12 +10,14 @@ import java.util.Properties;
 
 import static io.restassured.RestAssured.given;
 
+// Task 13
 public class SetupFunctions {
+// Task 14
+    private String username;
+    private String password;
+    private String baseUrl;
 
-    String username;
-    String password;
-    String baseUrl;
-
+    // Task 13
     public SetupFunctions() {
 
         try (InputStream input = new FileInputStream("settings.properties")) {
@@ -37,10 +39,13 @@ public class SetupFunctions {
 //        return gson.toJson(user);
 //    }
 //
-//    public String getBaseUrl (){
-//        return baseUrl;
-//    }
 
+    // Task 13
+    public String getBaseUrl (){
+        return baseUrl;
+    }
+
+    // Task 13
     public String getToken() {
         User user = new User();
         user.setUsername(username);
