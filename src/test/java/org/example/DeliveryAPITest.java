@@ -38,7 +38,6 @@ public class DeliveryAPITest {
 
         RestAssured.baseURI = setupFunctions.getBaseUrl();
 
-
        Assumptions.assumeFalse(token.isEmpty(), "Token is not exists, all test skipped");
     }
 
@@ -172,42 +171,44 @@ public class DeliveryAPITest {
     // 4. Negative test - test without token (GET)
     @Test
     public void negativeTestOrderWithoutTokenGet() {
+
+    int orderIdCreated = createOrderForSearchingAndDeleting ();
+
         given()
                 .when()
                 .header("Content-Type", "application/json")
 //                .header("Authorization", "Bearer " + token)
                 .log()
                 .all()
-                .get("orders/3814")
+                .get("orders/" + orderIdCreated)
                 .then()
                 .log()
                 .all()
-                .statusCode(HttpStatus.SC_BAD_REQUEST);
+                .statusCode(HttpStatus.SC_UNAUTHORIZED);
 
+        //Владимир, где у нас должно отображается это сообщение "Token is not exists, all test skipped"? В логах я его не вижу
         Assumptions.assumeFalse(token.isEmpty(), "Token is not exists, all test skipped");
-
     }
 
     // Task 14
     // 5. Negative test - test without header content-type (GET)
     @Test
     public void negativeTestOrderHeaderContentTypeGet() {
-        String id = given()
+
+        Order orderForNegativeTest = new Order(0, "Wednesday", "+37299988877", "sunny", 0);
+        Gson gsonForNegativeTest = new Gson();
+
+                given()
                 .when()
 //                .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
+                .body(gsonForNegativeTest.toJson(orderForNegativeTest))
                 .log()
                 .all()
-                .get("orders/3814")
+                .post("/orders")
                 .then()
                 .log()
                 .all()
-                .statusCode(HttpStatus.SC_BAD_REQUEST)
-                .and()
-                .extract()
-                .path("id");
-
-        Assertions.assertEquals(3814, id);
-
+                .statusCode(HttpStatus.SC_UNSUPPORTED_MEDIA_TYPE);
     }
 }

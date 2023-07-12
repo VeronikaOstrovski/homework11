@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 13 done">
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dto/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
@@ -44,8 +42,27 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/target" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryAPITest.createOrder">
+  <component name="RunManager" selected="JUnit.DeliveryAPITest">
+    <configuration name="DeliveryAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DeliveryAPITest.createOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
@@ -57,22 +74,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
       <option name="METHOD_NAME" value="createOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryAPITest.deleteOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
-      <option name="METHOD_NAME" value="deleteOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryAPITest.searchCreatedOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SetupFunctions.createdOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -119,8 +120,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
-      <option name="METHOD_NAME" value="searchCreatedOrder" />
+      <option name="MAIN_CLASS_NAME" value="org.example.SetupFunctions" />
+      <option name="METHOD_NAME" value="createdOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryAPITest.createOrder" />
+        <item itemvalue="JUnit.DeliveryAPITest" />
         <item itemvalue="JUnit.DeliveryAPITest.negativeTestOrderHeaderContentTypeGet" />
         <item itemvalue="JUnit.DeliveryAPITest.negativeTestOrderWithoutTokenGet" />
-        <item itemvalue="JUnit.DeliveryAPITest.deleteOrder" />
-        <item itemvalue="JUnit.DeliveryAPITest.searchCreatedOrder" />
+        <item itemvalue="JUnit.DeliveryAPITest.createOrder" />
+        <item itemvalue="JUnit.SetupFunctions.createdOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688673087643</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Task 14 done:&#10;1. Created an order &#10;2. Searched a created order (at first created an order for searching and deleting and then searched created order by orderId (to get orderId from POST)&#10;3. Deleted an order and searched a deleted order&#10;4. Negative test - test without token (GET)&#10;5. Negative test - test without header content-type (GET)&#10;6. For all tests did asserts.&#10;7. To check response body at test for delete order (response bode - true)&#10;8. Response body is empty at the order which was deleted (checked with method GET)">
+      <created>1688936600372</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688936600372</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,7 +210,8 @@
     <MESSAGE value="Task 12 done" />
     <MESSAGE value="Task 13 done" />
     <MESSAGE value="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values" />
+    <MESSAGE value="Task 14 done:&#10;1. Created an order &#10;2. Searched a created order (at first created an order for searching and deleting and then searched created order by orderId (to get orderId from POST)&#10;3. Deleted an order and searched a deleted order&#10;4. Negative test - test without token (GET)&#10;5. Negative test - test without header content-type (GET)&#10;6. For all tests did asserts.&#10;7. To check response body at test for delete order (response bode - true)&#10;8. Response body is empty at the order which was deleted (checked with method GET)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 14 done:&#10;1. Created an order &#10;2. Searched a created order (at first created an order for searching and deleting and then searched created order by orderId (to get orderId from POST)&#10;3. Deleted an order and searched a deleted order&#10;4. Negative test - test without token (GET)&#10;5. Negative test - test without header content-type (GET)&#10;6. For all tests did asserts.&#10;7. To check response body at test for delete order (response bode - true)&#10;8. Response body is empty at the order which was deleted (checked with method GET)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -219,33 +228,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>209</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>186</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>166</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>117</line>
+          <line>116</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="36" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

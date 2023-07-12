@@ -2,6 +2,7 @@ package org.example;
 
 import com.google.gson.Gson;
 import dto.User;
+import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,13 +33,6 @@ public class SetupFunctions {
             e.printStackTrace();
         }
     }
-
-//    public String createUser(){
-//        User user = new User (username, password);
-//        Gson gson = new Gson();
-//        return gson.toJson(user);
-//    }
-//
 
     // Task 13
     public String getBaseUrl (){
