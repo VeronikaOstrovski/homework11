@@ -4,8 +4,11 @@ import com.google.gson.Gson;
 import dto.Order;
 import dto.User;
 import io.restassured.RestAssured;
+import io.restassured.internal.RestAssuredResponseImpl;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,6 +18,7 @@ import javax.swing.text.AbstractDocument;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.CoderResult;
 import java.util.Properties;
 
 import static io.restassured.RestAssured.get;
@@ -38,7 +42,7 @@ public class DeliveryAPITest {
 
         RestAssured.baseURI = setupFunctions.getBaseUrl();
 
-       Assumptions.assumeFalse(token.isEmpty(), "Token is not exists, all test skipped");
+        Assumptions.assumeFalse(token.isEmpty(), "Token is not exists, all test skipped");
     }
 
     // Task 14
@@ -62,7 +66,7 @@ public class DeliveryAPITest {
                 .all()
                 .statusCode(HttpStatus.SC_OK);
 
-        Assertions.assertNotNull (newOrder.getCustomerName());
+        Assertions.assertNotNull(newOrder.getCustomerName());
     }
 
     // Task 14
@@ -98,7 +102,7 @@ public class DeliveryAPITest {
 
         int orderIdCreated = createOrderForSearchingAndDeleting();
 
-       String status = given()
+        String status = given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -115,7 +119,6 @@ public class DeliveryAPITest {
 
 
         Assertions.assertEquals("OPEN", status);
-
     }
 
     // Task 14
@@ -125,13 +128,13 @@ public class DeliveryAPITest {
 
         int orderIdCreated = createOrderForSearchingAndDeleting();
 
-        given()
+        String body = given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
                 .log()
                 .all()
-                .delete("orders/" + orderIdCreated)
+                .delete("/orders/" + orderIdCreated)
                 .then()
                 .log()
                 .all()
@@ -142,17 +145,17 @@ public class DeliveryAPITest {
                 .getBody()
                 .asString();
 
-        Assertions.assertTrue(true);
+        Assertions.assertTrue(true, body);
 
         // Searched a deleted order
 
-        String body = given ()
+        String bodyIsEmpty = given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
                 .log()
                 .all()
-                .get("orders/" + orderIdCreated)
+                .get("/orders/" + orderIdCreated)
                 .then()
                 .log()
                 .all()
@@ -163,8 +166,7 @@ public class DeliveryAPITest {
                 .getBody()
                 .asString();
 
-        Assumptions.assumeTrue(body.isEmpty(), "Test passed if response body is empty");
-
+        Assumptions.assumeTrue(bodyIsEmpty.isEmpty(), "Test passed if response body is empty");
     }
 
     // Task 14
@@ -172,7 +174,7 @@ public class DeliveryAPITest {
     @Test
     public void negativeTestOrderWithoutTokenGet() {
 
-    int orderIdCreated = createOrderForSearchingAndDeleting ();
+        int orderIdCreated = createOrderForSearchingAndDeleting();
 
         given()
                 .when()
@@ -180,7 +182,7 @@ public class DeliveryAPITest {
 //                .header("Authorization", "Bearer " + token)
                 .log()
                 .all()
-                .get("orders/" + orderIdCreated)
+                .get("/orders/" + orderIdCreated)
                 .then()
                 .log()
                 .all()
@@ -198,7 +200,7 @@ public class DeliveryAPITest {
         Order orderForNegativeTest = new Order(0, "Wednesday", "+37299988877", "sunny", 0);
         Gson gsonForNegativeTest = new Gson();
 
-                given()
+        String headerContentType = given()
                 .when()
 //                .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -209,6 +211,243 @@ public class DeliveryAPITest {
                 .then()
                 .log()
                 .all()
-                .statusCode(HttpStatus.SC_UNSUPPORTED_MEDIA_TYPE);
+                .statusCode(HttpStatus.SC_UNSUPPORTED_MEDIA_TYPE)
+                .extract()
+                .asString();
+
+        //Здесь такой же вопрос, что и выше. Где оно отображается?
+        Assumptions.assumeFalse(headerContentType.isEmpty(), "Content-Type is not exists, all test skipped");
     }
+
+    // Task 15
+    // 1.1.Available orders with role student
+
+    @Test
+    public void availableOrdersRoleStudent() {
+
+        Response response = given()
+                .when()
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get("/orders/available")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_FORBIDDEN)
+                .extract()
+                .response();
+
+        Assertions.assertEquals(HttpStatus.SC_FORBIDDEN, response.getStatusCode());
+    }
+
+    //1.2.Status orders with role student
+    @Test
+    public void statusOrderRoleStudent() {
+
+        Order statusOrderRoleStudent = new Order(0, "Tuesday", "+37211122233", "hello", 0);
+        Gson gsonStatusOrderRoleStudent = new Gson();
+
+        Response response = given()
+                .when()
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .body(gsonStatusOrderRoleStudent.toJson(statusOrderRoleStudent))
+                .log()
+                .all()
+                .put("/orders/" + statusOrderRoleStudent.getId() + "/status")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_FORBIDDEN)
+                .extract()
+                .response();
+
+        Assertions.assertEquals(HttpStatus.SC_FORBIDDEN, response.getStatusCode());
+    }
+
+    // 3. Check array orders
+    @Test
+    public void deleteArrayOrders() {
+
+        Order[] ordersArray = given()
+                .when()
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get("/orders")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_OK)
+                .extract()
+                .as(Order[].class);
+
+        if (ordersArray.length > 0) {
+
+            for (int i = 0; i < ordersArray.length; i++) {
+
+                System.out.println("Deleting order with id: " + ordersArray[i].getId());
+                Response response = given()
+                        .when()
+                        .header("Content-Type", "application/json")
+                        .header("Authorization", "Bearer " + token)
+                        .log()
+                        .all()
+                        .delete("/orders/" + ordersArray[i].getId())
+                        .then()
+                        .log()
+                        .all()
+                        .statusCode(HttpStatus.SC_OK)
+                        .extract()
+                        .response();
+
+                Assertions.assertEquals(HttpStatus.SC_OK, response.getStatusCode());
+            }
+        }
+    }
+    // Create three new orders
+
+    public String generatedRandomCustomerName() {
+        RandomStringUtils randomStringUtils = new RandomStringUtils();
+        int lengthCustomerName = 10;
+        boolean useLettersCustomerName = true;
+        boolean useSymbolsCustomerName = true;
+        String generatedStringCustomerName = RandomStringUtils.random(lengthCustomerName, useLettersCustomerName, useSymbolsCustomerName);
+
+        return generatedStringCustomerName;
+    }
+
+    public String generatedRandomCustomerPhone() {
+        RandomStringUtils randomStringUtils = new RandomStringUtils();
+        int lengthCustomerPhone = 12;
+        boolean useNumbersCustomerPhone = true;
+        boolean useSymbolsCustomerPhone = false;
+        String generatedStringCustomerPhone = RandomStringUtils.random(lengthCustomerPhone, useSymbolsCustomerPhone, useNumbersCustomerPhone);
+
+        return generatedStringCustomerPhone;
+    }
+
+    public String generatedRandomComment() {
+        int lengthComment = 15;
+        boolean useLettersComment = true;
+        boolean useNumbersComment = true;
+        String generatedStringComment = RandomStringUtils.random(lengthComment, useLettersComment, useNumbersComment);
+
+        return generatedStringComment;
+    }
+
+    // Created 3 orders with the same random data
+    @Test
+    public void generatedCreateOrder() {
+        Order generatedOrder = new Order();
+        generatedOrder.setStatus("OPEN");
+        generatedOrder.setCourierId(0);
+        generatedOrder.setCustomerName(generatedRandomCustomerName());
+        generatedOrder.setCustomerPhone(generatedRandomCustomerPhone());
+        generatedOrder.setComment(generatedRandomComment());
+        generatedOrder.setId(0);
+
+        Gson gsonGeneratedOrder = new Gson();
+
+        Order[] generatedOrderArray = {generatedOrder, generatedOrder, generatedOrder};
+        for (int i = 0; i < generatedOrderArray.length; i++)
+
+            given()
+                    .when()
+                    .header("Content-Type", "application/json")
+                    .header("Authorization", "Bearer " + token)
+                    .body(gsonGeneratedOrder.toJson(generatedOrder))
+                    .log()
+                    .all()
+                    .post("/orders")
+                    .then()
+                    .log()
+                    .all()
+                    .statusCode(HttpStatus.SC_OK);
+
+        Assertions.assertNotNull(generatedOrder.getId());
+
+        Order[] checkNewCreatedOrders = given()
+                .when()
+                .header("Content-Type", "application/json")
+                .header("Authorization", "Bearer " + token)
+                .log()
+                .all()
+                .get("/orders")
+                .then()
+                .log()
+                .all()
+                .statusCode(HttpStatus.SC_OK)
+                .extract()
+                .as(Order[].class);
+
+        Assertions.assertEquals(0, generatedOrder.getCourierId());
+
+    }
+
+//    // Created 3 orders with the different random data
+//    @Test
+//    public void generatedCreateOrderDifferentRandomData() {
+//        Order generatedFirstOrder = new Order();
+//        generatedFirstOrder.setStatus("OPEN");
+//        generatedFirstOrder.setCourierId(0);
+//        generatedFirstOrder.setCustomerName(generatedRandomCustomerName());
+//        generatedFirstOrder.setCustomerPhone(generatedRandomCustomerPhone());
+//        generatedFirstOrder.setComment(generatedRandomComment());
+//        generatedFirstOrder.setId(0);
+//
+//        Order generatedSecondOrder = new Order();
+//        generatedSecondOrder.setStatus("OPEN");
+//        generatedSecondOrder.setCourierId(0);
+//        generatedSecondOrder.setCustomerName(generatedRandomCustomerName());
+//        generatedSecondOrder.setCustomerPhone(generatedRandomCustomerPhone());
+//        generatedSecondOrder.setComment(generatedRandomComment());
+//        generatedSecondOrder.setId(0);
+//
+//        Order generatedThirdOrder = new Order();
+//        generatedThirdOrder.setStatus("OPEN");
+//        generatedThirdOrder.setCourierId(0);
+//        generatedThirdOrder.setCustomerName(generatedRandomCustomerName());
+//        generatedThirdOrder.setCustomerPhone(generatedRandomCustomerPhone());
+//        generatedThirdOrder.setComment(generatedRandomComment());
+//        generatedThirdOrder.setId(0);
+//
+//        Gson gsonGeneratedOrder = new Gson();
+//
+//        Order[] generatedOrderArray = {generatedFirstOrder, generatedSecondOrder, generatedThirdOrder};
+//        for (int i = 0; i < generatedOrderArray.length; i++)
+//
+//            given()
+//                    .when()
+//                    .header("Content-Type", "application/json")
+//                    .header("Authorization", "Bearer " + token)
+//                    .body(gsonGeneratedOrder.toJson(generatedOrderArray))
+////                    .body(gsonGeneratedOrder.toJson(generatedSecondOrder))
+////                    .body(gsonGeneratedOrder.toJson(generatedThirdOrder))
+//                    .log()
+//                    .all()
+//                    .post("/orders")
+//                    .then()
+//                    .log()
+//                    .all()
+//                    .statusCode(HttpStatus.SC_OK);
+//
+////        Assertions.assertNotNull(generatedOrder.getId());
+//    }
+//    Order[] checkNewCreatedOrdersDifferentData = given()
+//            .when()
+//            .header("Content-Type", "application/json")
+//            .header("Authorization", "Bearer " + token)
+//            .log()
+//            .all()
+//            .get("/orders")
+//            .then()
+//            .log()
+//            .all()
+//            .extract()
+//            .as(Order[].class);
+//
 }
