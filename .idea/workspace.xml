@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
       <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
@@ -250,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689869588844</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
+      <created>1689885102711</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885102712</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
