@@ -13,10 +13,30 @@ import static io.restassured.RestAssured.given;
 
 // Task 13
 public class SetupFunctions {
-// Task 14
+    // Task 14
     private String username;
     private String password;
     private String baseUrl;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
 
     // Task 13
     public SetupFunctions() {
@@ -32,7 +52,12 @@ public class SetupFunctions {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+
+
+
 
     // Task 13
     public String getBaseUrl (){
