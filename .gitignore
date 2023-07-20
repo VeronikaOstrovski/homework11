@@ -36,4 +36,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/settings.properties
+/src/test/java/org/example/settings.properties
