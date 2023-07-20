@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Changed statuse">
+    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 15 done:&#10;1. Http">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dto/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dto/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2RstlxAhzy2xxlczJWpHRHkvJty" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -48,7 +50,7 @@
       <recent name="$PROJECT_DIR$/target" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryAPITest">
+  <component name="RunManager" selected="JUnit.DeliveryAPITest.generatedCreateOrderDifferentRandomData">
     <configuration name="CreatedUser.toCreateUserSerialization" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
@@ -130,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryAPITest" />
         <item itemvalue="JUnit.DeliveryAPITest.generatedCreateOrderDifferentRandomData" />
         <item itemvalue="JUnit.DeliveryAPITest.generatedCreateOrder" />
-        <item itemvalue="JUnit.DeliveryAPITest.deleteArrayOrders" />
         <item itemvalue="JUnit.CreatedUser.toCreateUserSerialization" />
+        <item itemvalue="JUnit.DeliveryAPITest" />
+        <item itemvalue="JUnit.DeliveryAPITest.deleteArrayOrders" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689151148996</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Task 15 done:&#10;1. Response code 403 for tests with role student for endpoint:&#10; /orders/available&#10; /orders/{id}/status&#10; 2. Created two test for array orders:&#10; - checked that all deleted orders are deleted&#10; - checked that three new created tests are created">
+      <created>1689430393392</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689430393392</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -220,7 +229,8 @@
     <MESSAGE value="Task 13 done:&#10;1. Created properties file with three fields&#10;2. Created file SetupFunctions&#10;3. Created tested class DeliveryAPITest with annotation &quot;Before all&quot;&#10;4. Created copy of properties file without values" />
     <MESSAGE value="Task 14 done:&#10;1. Created an order &#10;2. Searched a created order (at first created an order for searching and deleting and then searched created order by orderId (to get orderId from POST)&#10;3. Deleted an order and searched a deleted order&#10;4. Negative test - test without token (GET)&#10;5. Negative test - test without header content-type (GET)&#10;6. For all tests did asserts.&#10;7. To check response body at test for delete order (response bode - true)&#10;8. Response body is empty at the order which was deleted (checked with method GET)" />
     <MESSAGE value="Changed statusCode at the negative tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed statusCode at the negative tests" />
+    <MESSAGE value="Task 15 done:&#10;1. Response code 403 for tests with role student for endpoint:&#10; /orders/available&#10; /orders/{id}/status&#10; 2. Created two test for array orders:&#10; - checked that all deleted orders are deleted&#10; - checked that three new created tests are created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 15 done:&#10;1. Response code 403 for tests with role student for endpoint:&#10; /orders/available&#10; /orders/{id}/status&#10; 2. Created two test for array orders:&#10; - checked that all deleted orders are deleted&#10; - checked that three new created tests are created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,12 +282,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>435</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>439</line>
+          <line>445</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">

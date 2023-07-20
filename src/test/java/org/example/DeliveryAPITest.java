@@ -388,7 +388,7 @@ public class DeliveryAPITest {
 
     }
 
-//    // Created 3 orders with the different random data
+    // Created 3 orders with the different random data
 //    @Test
 //    public void generatedCreateOrderDifferentRandomData() {
 //        Order generatedFirstOrder = new Order();
@@ -417,20 +417,26 @@ public class DeliveryAPITest {
 //
 //        Gson gsonGeneratedOrder = new Gson();
 //
-//        Order[] generatedOrderArray = {generatedFirstOrder, generatedSecondOrder, generatedThirdOrder};
-//        for (int i = 0; i < generatedOrderArray.length; i++)
+//        Order[] generatedOrderArrayDifferentRandomData = {generatedFirstOrder, generatedSecondOrder};
+//        for (int i = 0; i < generatedOrderArrayDifferentRandomData.length; i++);
+//        Order test = new Order();
+//        //testArray = generatedOrderArrayDifferentRandomData;
 //
 //            given()
 //                    .when()
 //                    .header("Content-Type", "application/json")
 //                    .header("Authorization", "Bearer " + token)
-//                    .body(gsonGeneratedOrder.toJson(generatedOrderArray))
+//                    .body(gsonGeneratedOrder.toJson(generatedFirstOrder))
 ////                    .body(gsonGeneratedOrder.toJson(generatedSecondOrder))
 ////                    .body(gsonGeneratedOrder.toJson(generatedThirdOrder))
 //                    .log()
 //                    .all()
+//                    .body(gsonGeneratedOrder.toJson(generatedSecondOrder))
 //                    .post("/orders")
 //                    .then()
+//                    .log()
+//                    .all()
+//                    .and()
 //                    .log()
 //                    .all()
 //                    .statusCode(HttpStatus.SC_OK);
@@ -449,5 +455,5 @@ public class DeliveryAPITest {
 //            .all()
 //            .extract()
 //            .as(Order[].class);
-//
+
 }
