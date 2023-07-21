@@ -23,3 +23,9 @@ Task 2
 | 2 | input (Поле ввода Пароля) | //*[@data-name='password-input'] |
 | 3 | button (Кнопка Войти)     | //*[@data-name='signIn-button']  |
 
+
+Task 4
+
+4.1. //td[3]
+4.2. //td[2]
+4.3. //*[text()='John Doe']

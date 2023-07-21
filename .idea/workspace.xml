@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,22 +68,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryAPITest.generatedCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
-      <option name="METHOD_NAME" value="generatedCreateOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DeliveryAPITest.generatedCreateOrderDifferentRandomData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
@@ -94,6 +80,21 @@
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryAPITest" />
       <option name="METHOD_NAME" value="generatedCreateOrderDifferentRandomData" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryWebTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,9 +135,9 @@
       <list>
         <item itemvalue="JUnit.DeliveryWebTest.insertCorrectLoginPasswordAndCheckError" />
         <item itemvalue="JUnit.DeliveryWebTest.insertIncorrectLoginPasswordAndCheckError" />
+        <item itemvalue="JUnit.DeliveryWebTest" />
         <item itemvalue="JUnit.DeliveryAPITest" />
         <item itemvalue="JUnit.DeliveryAPITest.generatedCreateOrderDifferentRandomData" />
-        <item itemvalue="JUnit.DeliveryAPITest.generatedCreateOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +255,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689885102712</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
+      <created>1689885420319</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885420319</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
+      <created>1689885497516</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885497516</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Task 17 done:&#10;1. Created check-list for UI testing&#10;2. Created list with web elements for testing check-list at first paragraph">
+      <created>1689885610857</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689885610858</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -293,7 +315,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
-          <line>89</line>
+          <line>90</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

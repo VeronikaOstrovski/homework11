@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class DeliveryWebTest {
@@ -26,7 +25,7 @@ public class DeliveryWebTest {
     public void insertCorrectLoginPasswordAndCheckError(){
 
         SetupFunctions setupFunctions = new SetupFunctions();
-        Configuration.browser = "edge";
+//        Configuration.browser = "edge";
         open("http://51.250.6.164:3000/signin");
 
         $(By.xpath("//input[@data-name='username-input']")).setValue(setupFunctions.getUsername());
