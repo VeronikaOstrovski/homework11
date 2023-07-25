@@ -45,7 +45,7 @@ public class DeliveryWebTest {
     public void insertIncorrectLoginPasswordAndCheckErrorAndRepeatSuccessfulLogin(){
 
         SetupFunctions setupFunctions = new SetupFunctions();
-        Configuration.browser = "edge";
+        System.setProperty("selenide.browser", "safari");
 
         open("http://51.250.6.164:3000/signin");
         $(By.xpath("//input[@data-name='username-input']")).setValue("test-login");
@@ -67,7 +67,7 @@ public class DeliveryWebTest {
     @Test
     public void buttonSignInInactiveLogin1SymbolPassword8Symbols(){
 
-        Configuration.browser = "edge";
+        System.setProperty("selenide.browser", "safari");
         open("http://51.250.6.164:3000/signin");
 
         $(By.xpath("//input[@data-name='username-input']")).setValue("l");
@@ -80,7 +80,7 @@ public class DeliveryWebTest {
     @Test
     public void buttonSignInInactiveLogin2SymbolsPassword1Symbol(){
 
-        Configuration.browser = "edge";
+        Configuration.browser = "safari";
         open("http://51.250.6.164:3000/signin");
 
         $(By.xpath("//input[@data-name='username-input']")).setValue("LO");
@@ -93,7 +93,7 @@ public class DeliveryWebTest {
     @Test
     public void buttonSignInInactiveLoginSpacePasswordSpace() {
 
-        Configuration.browser = "edge";
+        System.setProperty("selenide.browser","safari");
         open("http://51.250.6.164:3000/signin");
 
         $(By.xpath("//input[@data-name='username-input']")).setValue(" ");
