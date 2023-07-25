@@ -57,9 +57,6 @@ public class SetupFunctions {
     }
 
 
-
-
-
     // Task 13
     public String getBaseUrl (){
         return baseUrl;
