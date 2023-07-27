@@ -1,6 +1,7 @@
 package org.example;
 
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -12,6 +13,12 @@ public class DeliveryWebTest {
     public void setUp() {
         open("http://51.250.6.164:3000/signin");
     }
+
+    @AfterEach
+    public void tearDown(){
+        closeWebDriver();
+    }
+
         @Test
         public void insertBeforeAllIncorrectLoginPasswordAndCheckError(){
 
@@ -21,7 +28,6 @@ public class DeliveryWebTest {
             $(By.xpath("//button[@data-name='signIn-button']")).click();
 
             $(By.xpath("//div[@data-name='authorizationError-popup']")).shouldBe(Condition.exist, Condition.visible);
-            closeWebDriver();
 
         }
 
