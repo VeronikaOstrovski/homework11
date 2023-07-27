@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
     </list>
@@ -51,8 +51,8 @@
       <recent name="$PROJECT_DIR$/target" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryWebTest.insertIncorrectLoginPasswordAndCheckErrorAndRepeatSuccessfulLogin">
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLogin1SymbolPassword8Symbols" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeliveryWebTest.errorForUnsuccessfulLoginParool">
+    <configuration name="DeliveryWebTest.buttonLogiSisseActiveMobiilId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -62,13 +62,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLogin1SymbolPassword8Symbols" />
+      <option name="METHOD_NAME" value="buttonLogiSisseActiveMobiilId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLogin2SymbolsPassword1Symbol" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryWebTest.buttonLogiSisseActiveParool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -78,13 +78,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLogin2SymbolsPassword1Symbol" />
+      <option name="METHOD_NAME" value="buttonLogiSisseActiveParool" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLoginEmptyPassword1Empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryWebTest.buttonLogiSisseActiveSmartId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -94,13 +94,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLoginEmptyPassword1Empty" />
+      <option name="METHOD_NAME" value="buttonLogiSisseActiveSmartId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLoginSpacePasswordSpace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryWebTest.buttonLogiSisseUnactiveSmartIdAndError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -110,13 +110,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLoginSpacePasswordSpace" />
+      <option name="METHOD_NAME" value="buttonLogiSisseUnactiveSmartIdAndError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.insertIncorrectLoginPasswordAndCheckErrorAndRepeatSuccessfulLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeliveryWebTest.errorForUnsuccessfulLoginParool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -126,7 +126,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="insertIncorrectLoginPasswordAndCheckErrorAndRepeatSuccessfulLogin" />
+      <option name="METHOD_NAME" value="errorForUnsuccessfulLoginParool" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryWebTest.insertIncorrectLoginPasswordAndCheckErrorAndRepeatSuccessfulLogin" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLogin1SymbolPassword8Symbols" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLogin2SymbolsPassword1Symbol" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLoginSpacePasswordSpace" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLoginEmptyPassword1Empty" />
+        <item itemvalue="JUnit.DeliveryWebTest.errorForUnsuccessfulLoginParool" />
+        <item itemvalue="JUnit.DeliveryWebTest.buttonLogiSisseUnactiveSmartIdAndError" />
+        <item itemvalue="JUnit.DeliveryWebTest.buttonLogiSisseActiveParool" />
+        <item itemvalue="JUnit.DeliveryWebTest.buttonLogiSisseActiveSmartId" />
+        <item itemvalue="JUnit.DeliveryWebTest.buttonLogiSisseActiveMobiilId" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690292614548</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Task 18 done:&#10;To check checks at the safari browser">
+      <created>1690300274396</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1690300274396</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -313,7 +320,8 @@
     <MESSAGE value="Task 17 done:&#10;4. For html document composed xpath" />
     <MESSAGE value="Task 17 done:&#10;Added checks" />
     <MESSAGE value="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values" />
+    <MESSAGE value="Task 18 done:&#10;To check checks at the safari browser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;To check checks at the safari browser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
