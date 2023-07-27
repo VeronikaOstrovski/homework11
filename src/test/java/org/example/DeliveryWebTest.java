@@ -3,6 +3,7 @@ package org.example;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.*;
@@ -19,7 +20,9 @@ public class DeliveryWebTest {
 
         $(By.xpath("//input[@data-name='username-input']")).setValue("login12345");
         $(By.xpath("//input[@data-name='password-input']")).setValue ("password12345");
+
         $(By.xpath("//button[@data-name='signIn-button']")).click();
+
         $(By.xpath("//div[@data-name='authorizationError-popup']")).shouldBe(Condition.exist, Condition.visible);
     }
 
@@ -50,6 +53,7 @@ public class DeliveryWebTest {
         open("http://51.250.6.164:3000/signin");
         $(By.xpath("//input[@data-name='username-input']")).setValue("test-login");
         $(By.xpath("//input[@data-name='password-input']")).setValue("test-password");
+
         $(By.xpath("//button[@data-name='signIn-button']")).click();
 
         $(By.xpath("//button[@data-name='authorizationError-popup-close-button']")).shouldBe(Condition.exist, Condition.visible);
@@ -58,7 +62,9 @@ public class DeliveryWebTest {
 
         $(By.xpath("//input[@data-name='username-input']")).setValue(setupFunctions.getUsername());
         $(By.xpath("//input[@data-name='password-input']")).setValue(setupFunctions.getPassword());
+
         $(By.xpath("//button[@data-name='signIn-button']")).click();
+
         $(By.xpath("//input[@data-name='phone-input']")).shouldBe(Condition.exist, Condition.visible);
 
     }
@@ -72,7 +78,9 @@ public class DeliveryWebTest {
 
         $(By.xpath("//input[@data-name='username-input']")).setValue("l");
         $(By.xpath("//input[@data-name='password-input']")).setValue("password");
+
         $(By.xpath("//button[@data-name='signIn-button']")).shouldBe(Condition.disabled);
+        $(By.xpath("//*[@data-name='username-input']/..//span[@data-name='username-input-error']")).shouldBe(Condition.exist, Condition.visible);
 
     }
 
@@ -80,12 +88,14 @@ public class DeliveryWebTest {
     @Test
     public void buttonSignInInactiveLogin2SymbolsPassword1Symbol(){
 
-        Configuration.browser = "safari";
+        System.setProperty("selenide.browser","safari");
         open("http://51.250.6.164:3000/signin");
 
         $(By.xpath("//input[@data-name='username-input']")).setValue("LO");
         $(By.xpath("//input[@data-name='password-input']")).setValue("P");
+
         $(By.xpath("//button[@data-name='signIn-button']")).shouldBe(Condition.disabled);
+        $(By.xpath("//*[@data-name='password-input']/..//span[@data-name='username-input-error']")).shouldBe(Condition.exist,Condition.visible);
 
     }
 
@@ -98,7 +108,12 @@ public class DeliveryWebTest {
 
         $(By.xpath("//input[@data-name='username-input']")).setValue(" ");
         $(By.xpath("//input[@data-name='password-input']")).setValue(" ");
+
         $(By.xpath("//button[@data-name='signIn-button']")).shouldBe(Condition.disabled);
+        $(By.xpath("//*[@data-name='username-input']/..//span[@data-name='username-input-error']")).shouldBe(Condition.exist, Condition.visible);
+        $(By.xpath("//*[@data-name='password-input']/..//span[@data-name='username-input-error']")).shouldBe(Condition.exist,Condition.visible);
+
+
 
         //Assertions.assertEquals(Condition.disabled, Condition.);
     }
@@ -110,9 +125,11 @@ public class DeliveryWebTest {
 
         Configuration.browser="safari";
         open("https://profile.esto.ee/login/mobile-id");
+
         $(By.xpath("//*[@id='phone-field']/ ..//input[@class='esto-text-input-container__input']")).setValue("+37258066606");
         $(By.xpath("//*[@id='pin-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
 //        $(By.xpath("//*[@id='pin-field']/ ..//input")).setValue("48812050267");
+
         $(By.xpath("//button[@estocypressdata='mobile-id-login-button']")).shouldBe(Condition.exist, Condition.visible);
     }
 
@@ -122,7 +139,9 @@ public class DeliveryWebTest {
 
         System.setProperty("selenide.browser","safari");
         open ("https://profile.esto.ee/login/smart-id");
+
         $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
+
         $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist,Condition.visible);
     }
 
@@ -132,8 +151,10 @@ public class DeliveryWebTest {
 
         System.setProperty("selenide.browser","safari");
         open("https://profile.esto.ee/login/password");
+
         $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("Login-test");
         $(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue("Parool-test");
+
         $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist, Condition.visible);
     }
 
@@ -143,8 +164,11 @@ public class DeliveryWebTest {
 
         System.setProperty("selenide.browser", "safari");
         open("https://profile.esto.ee/login/smart-id");
+
         $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("488120502677");
+
         $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
+
         $(By.xpath("//*[@class='error-text ng-star-inserted']")).shouldBe(Condition.exist, Condition.visible);
     }
 
@@ -154,9 +178,33 @@ public class DeliveryWebTest {
 
         Configuration.browser="safari";
         open("https://profile.esto.ee/login/password");
+
         $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("");
         $(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue(" ");
+
         $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
+
         $(By.xpath("//span[@class='ng-star-inserted']")).shouldBe(Condition.exist,Condition.visible);
     }
+
+    // Lesson 19
+
+    @BeforeEach
+    public void setUp() {
+        open("http://51.250.6.164:3000/signin");
     }
+        @Test
+        public void insertBeforeAllIncorrectLoginPasswordAndCheckError(){
+
+            $(By.xpath("//input[@data-name='username-input']")).setValue("login12345");
+            $(By.xpath("//input[@data-name='password-input']")).setValue ("password12345");
+
+            $(By.xpath("//button[@data-name='signIn-button']")).click();
+
+            $(By.xpath("//div[@data-name='authorizationError-popup']")).shouldBe(Condition.exist, Condition.visible);
+            closeWebDriver();
+
+        }
+
+    }
+
