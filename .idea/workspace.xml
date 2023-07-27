@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1690300274396</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Task 18 done:&#10;Added checks for https://profile.esto.ee/login:&#10;- successful login&#10;- unsuccessful login">
+      <created>1690465100292</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1690465100292</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Task 18 done:&#10;Corrected check-list">
+      <created>1690465296435</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1690465296435</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -321,7 +334,9 @@
     <MESSAGE value="Task 17 done:&#10;Added checks" />
     <MESSAGE value="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values" />
     <MESSAGE value="Task 18 done:&#10;To check checks at the safari browser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;To check checks at the safari browser" />
+    <MESSAGE value="Task 18 done:&#10;Added checks for https://profile.esto.ee/login:&#10;- successful login&#10;- unsuccessful login" />
+    <MESSAGE value="Task 18 done:&#10;Corrected check-list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;Corrected check-list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
