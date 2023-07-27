@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
@@ -50,8 +51,8 @@
       <recent name="$PROJECT_DIR$/target" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeliveryWebTest.buttonSignInInactiveLoginSpacePasswordSpace">
-    <configuration name="DeliveryWebTest.buttonLogiSisseUnactiveSmartIdAndError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="Homework18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -60,14 +61,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonLogiSisseUnactiveSmartIdAndError" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLogin1SymbolPassword8Symbols" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Homework18.buttonSignInInactiveLoginSpacePasswordSpace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -76,46 +76,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLogin1SymbolPassword8Symbols" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLogin2SymbolsPassword1Symbol" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLogin2SymbolsPassword1Symbol" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeliveryWebTest.buttonSignInInactiveLoginSpacePasswordSpace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
       <option name="METHOD_NAME" value="buttonSignInInactiveLoginSpacePasswordSpace" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeliveryWebTest.errorForUnsuccessfulLoginParool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Homework18.errorForUnsuccessfulLoginParool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +92,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
       <option name="METHOD_NAME" value="errorForUnsuccessfulLoginParool" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework18.insertCorrectLoginPasswordAndCheckError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
+      <option name="METHOD_NAME" value="insertCorrectLoginPasswordAndCheckError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework18.insertIncorrectLoginPasswordAndCheckError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
+      <option name="METHOD_NAME" value="insertIncorrectLoginPasswordAndCheckError" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLoginSpacePasswordSpace" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLogin2SymbolsPassword1Symbol" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonSignInInactiveLogin1SymbolPassword8Symbols" />
-        <item itemvalue="JUnit.DeliveryWebTest.errorForUnsuccessfulLoginParool" />
-        <item itemvalue="JUnit.DeliveryWebTest.buttonLogiSisseUnactiveSmartIdAndError" />
+        <item itemvalue="JUnit.Homework18.errorForUnsuccessfulLoginParool" />
+        <item itemvalue="JUnit.Homework18" />
+        <item itemvalue="JUnit.Homework18.insertIncorrectLoginPasswordAndCheckError" />
+        <item itemvalue="JUnit.Homework18.insertCorrectLoginPasswordAndCheckError" />
+        <item itemvalue="JUnit.Homework18.buttonSignInInactiveLoginSpacePasswordSpace" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690465603169</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Task 18 done:&#10;For checks 1.4.1, 1.4.2, 1.4.3 added checks for error">
+      <created>1690467274878</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690467274878</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -343,7 +350,8 @@
     <MESSAGE value="Task 18 done:&#10;To check checks at the safari browser" />
     <MESSAGE value="Task 18 done:&#10;Added checks for https://profile.esto.ee/login:&#10;- successful login&#10;- unsuccessful login" />
     <MESSAGE value="Task 18 done:&#10;Corrected check-list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;Corrected check-list" />
+    <MESSAGE value="Task 18 done:&#10;For checks 1.4.1, 1.4.2, 1.4.3 added checks for error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;For checks 1.4.1, 1.4.2, 1.4.3 added checks for error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
