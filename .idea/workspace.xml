@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 18 done:&#10;1. Incorrect login and incorrect password, checked error and repeat login with correct login and correct password&#10;2. Checked login and password with min. values">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Esto.java" afterDir="false" />
+    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework19Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CreatedOrderPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/OrderPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +57,7 @@
       <recent name="$PROJECT_DIR$/target" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Homework18">
+  <component name="RunManager" selected="JUnit.Homework19Order.searchOrderWithOrderNumber">
     <configuration name="DeliveryWebTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
@@ -68,7 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Homework18Login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -77,13 +82,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18Login" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework18Esto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Homework18Login.buttonSignInInactiveLoginSpacePasswordSpace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -92,29 +97,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18Esto" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Homework18.errorForUnsuccessfulLoginParool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
-      <option name="METHOD_NAME" value="errorForUnsuccessfulLoginParool" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework18Login" />
+      <option name="METHOD_NAME" value="buttonSignInInactiveLoginSpacePasswordSpace" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework18.insertIncorrectLoginPasswordAndCheckError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Homework19Order.createOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +113,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18" />
-      <option name="METHOD_NAME" value="insertIncorrectLoginPasswordAndCheckError" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework19Order" />
+      <option name="METHOD_NAME" value="createOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Homework19Order.searchOrderWithOrderNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Homework19Order" />
+      <option name="METHOD_NAME" value="searchOrderWithOrderNumber" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Homework18" />
-        <item itemvalue="JUnit.Homework18Esto" />
+        <item itemvalue="JUnit.Homework19Order.searchOrderWithOrderNumber" />
+        <item itemvalue="JUnit.Homework19Order.createOrder" />
         <item itemvalue="JUnit.DeliveryWebTest" />
-        <item itemvalue="JUnit.Homework18.errorForUnsuccessfulLoginParool" />
-        <item itemvalue="JUnit.Homework18.insertIncorrectLoginPasswordAndCheckError" />
+        <item itemvalue="JUnit.Homework18Login" />
+        <item itemvalue="JUnit.Homework18Login.buttonSignInInactiveLoginSpacePasswordSpace" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690469994211</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Task 18 done:&#10;Added Homework18Esto.java">
+      <created>1690473227821</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1690473227821</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -358,7 +371,8 @@
     <MESSAGE value="Task 18 done:&#10;Corrected check-list" />
     <MESSAGE value="Task 18 done:&#10;For checks 1.4.1, 1.4.2, 1.4.3 added checks for error" />
     <MESSAGE value="Task 18 done:&#10;Renamed DeliveryWebTest.java to Homework18.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;Renamed DeliveryWebTest.java to Homework18.java" />
+    <MESSAGE value="Task 18 done:&#10;Added Homework18Esto.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;Added Homework18Esto.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -385,7 +399,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
-          <line>87</line>
+          <line>93</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

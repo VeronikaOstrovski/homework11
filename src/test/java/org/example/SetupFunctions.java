@@ -17,6 +17,7 @@ public class SetupFunctions {
     private String username;
     private String password;
     private String baseUrl;
+    private String baseUrlWeb;
 
     public String getUsername() {
         return username;
@@ -24,6 +25,10 @@ public class SetupFunctions {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getBaseUrlWeb() {
+        return baseUrlWeb;
     }
 
     public void setUsername(String username) {
@@ -49,6 +54,7 @@ public class SetupFunctions {
             baseUrl = properties.getProperty("baseUrl");
             username = properties.getProperty("username");
             password = properties.getProperty("password");
+            baseUrlWeb = properties.getProperty("baseUrlWeb");
 
         } catch (IOException e) {
             e.printStackTrace();
