@@ -78,4 +78,5 @@ public class Homework18Esto {
 
         $(By.xpath("//span[@class='ng-star-inserted']")).shouldBe(Condition.exist,Condition.visible);
     }
+
 }

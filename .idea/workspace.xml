@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework19Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/CreatedOrderPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/OrderPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Array.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DivideNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/Scanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TestDivideNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18Esto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Esto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +53,12 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/target" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.Homework19Order.searchOrderWithOrderNumber">
-    <configuration name="DeliveryWebTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestDivideNumbers">
+    <configuration name="Array" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -67,13 +67,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.DeliveryWebTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Array" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework18Login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Array.arrayIndexOutOfBoundsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -82,13 +82,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18Login" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Array" />
+      <option name="METHOD_NAME" value="arrayIndexOutOfBoundsException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDivideNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TestDivideNumbers" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework18Login.buttonSignInInactiveLoginSpacePasswordSpace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDivideNumbers.testDivideTwoNumbersReturnsCorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -97,14 +113,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework18Login" />
-      <option name="METHOD_NAME" value="buttonSignInInactiveLoginSpacePasswordSpace" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TestDivideNumbers" />
+      <option name="METHOD_NAME" value="testDivideTwoNumbersReturnsCorrectResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Homework19Order.createOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDivideNumbers.testNegativeDivideTwoNumbers15And0AndReturnsCorrectResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
@@ -113,24 +129,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework19Order" />
-      <option name="METHOD_NAME" value="createOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Homework19Order.searchOrderWithOrderNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Homework19Order" />
-      <option name="METHOD_NAME" value="searchOrderWithOrderNumber" />
+      <option name="MAIN_CLASS_NAME" value="org.example.TestDivideNumbers" />
+      <option name="METHOD_NAME" value="testNegativeDivideTwoNumbers15And0AndReturnsCorrectResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Homework19Order.searchOrderWithOrderNumber" />
-        <item itemvalue="JUnit.Homework19Order.createOrder" />
-        <item itemvalue="JUnit.DeliveryWebTest" />
-        <item itemvalue="JUnit.Homework18Login" />
-        <item itemvalue="JUnit.Homework18Login.buttonSignInInactiveLoginSpacePasswordSpace" />
+        <item itemvalue="JUnit.TestDivideNumbers" />
+        <item itemvalue="JUnit.TestDivideNumbers.testNegativeDivideTwoNumbers15And0AndReturnsCorrectResult" />
+        <item itemvalue="JUnit.Array" />
+        <item itemvalue="JUnit.Array.arrayIndexOutOfBoundsException" />
+        <item itemvalue="JUnit.TestDivideNumbers.testDivideTwoNumbersReturnsCorrectResult" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690473227821</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order">
+      <created>1690563208493</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1690563208493</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -372,7 +379,8 @@
     <MESSAGE value="Task 18 done:&#10;For checks 1.4.1, 1.4.2, 1.4.3 added checks for error" />
     <MESSAGE value="Task 18 done:&#10;Renamed DeliveryWebTest.java to Homework18.java" />
     <MESSAGE value="Task 18 done:&#10;Added Homework18Esto.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 18 done:&#10;Added Homework18Esto.java" />
+    <MESSAGE value="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -426,6 +434,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
           <line>445</line>
           <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/TestDivideNumbers.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
