@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class Array {
 
+    //Positive test: check index 1 at the array
     @Test
     public void testPositiveArrayIndex1OutOfBoundsException() {
 
@@ -19,6 +20,7 @@ public class Array {
         System.out.println("day[1] : " + day[1]);
     }
 
+    //Positive test: check index 4 at the array
     @Test
     public void testPositiveArrayIndex4OutOfBoundsException() {
 
@@ -33,6 +35,7 @@ public class Array {
         System.out.println("day[4] : " + day[4]);
     }
 
+    //Negative test: check index 6 at the array
     @Test
     public void testNegativeArrayIndex6OutOfBoundsException() {
 
@@ -47,6 +50,7 @@ public class Array {
         System.out.println("day[6] : " + day[6]);
     }
 
+    //Positive test: check index 7 at the array
     @Test
     public void testNegativeArrayIndex7OutOfBoundsException() {
 
