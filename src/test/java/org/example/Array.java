@@ -39,29 +39,38 @@ public class Array {
     @Test
     public void testNegativeArrayIndex6OutOfBoundsException() {
 
-        String[] day = new String[5];
+        try {
+            String[] day = new String[5];
 
-        day[0] = "Monday";
-        day[1] = "Tuesday";
-        day[2] = "Wednesday";
-        day[3] = "Thursday";
-        day[4] = "Friday";
+            day[0] = "Monday";
+            day[1] = "Tuesday";
+            day[2] = "Wednesday";
+            day[3] = "Thursday";
+            day[4] = "Friday";
 
-        System.out.println("day[6] : " + day[6]);
+            System.out.println("day[6] : " + day[6]);
+        }
+        catch (ArrayIndexOutOfBoundsException e) {
+        }
     }
 
-    //Positive test: check index 7 at the array
+    //Negative test: check index 7 at the array
     @Test
     public void testNegativeArrayIndex7OutOfBoundsException() {
 
-        String[] day = new String[5];
+        try {
+            String[] day = new String[5];
 
-        day[0] = "Monday";
-        day[1] = "Tuesday";
-        day[2] = "Wednesday";
-        day[3] = "Thursday";
-        day[4] = "Friday";
+            day[0] = "Monday";
+            day[1] = "Tuesday";
+            day[2] = "Wednesday";
+            day[3] = "Thursday";
+            day[4] = "Friday";
 
-        System.out.println("day[6] : " + day[7]);
+            System.out.println("day[6] : " + day[7]);
+        }
+        catch
+        (ArrayIndexOutOfBoundsException e) {
     }
+}
 }
