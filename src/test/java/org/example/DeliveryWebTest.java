@@ -1,14 +1,13 @@
 package org.example;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import pages.LoginPage;
-
-import static com.codeborne.selenide.Selenide.*;
 
 public class DeliveryWebTest {
     static SetupFunctions setupFunctions;
@@ -21,12 +20,12 @@ public class DeliveryWebTest {
     @BeforeEach
     public void setUp() {
 
-        open(setupFunctions.getBaseUrlWeb());
+        Selenide.open(setupFunctions.getBaseUrlWeb());
     }
 
     @AfterEach
     public void tearDown(){
-        closeWebDriver();
+        Selenide.closeWebDriver();
     }
 
         @Test
@@ -43,7 +42,7 @@ public class DeliveryWebTest {
 
 //            $(By.xpath("//button[@data-name='signIn-button']")).click();
 
-            $(By.xpath("//div[@data-name='authorizationError-popup']")).shouldBe(Condition.exist, Condition.visible);
+            Selenide.$(By.xpath("//div[@data-name='authorizationError-popup']")).shouldBe(Condition.exist, Condition.visible);
 
         }
 
@@ -61,7 +60,7 @@ public class DeliveryWebTest {
 
 //        $(By.xpath("//button[@data-name='signIn-button']")).click();
 
-        $(By.xpath("//button[@data-name='createOrder-button']")).shouldBe(Condition.exist, Condition.visible);
-        $(By.xpath("//button[@data-name='openStatusPopup-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@data-name='createOrder-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@data-name='openStatusPopup-button']")).shouldBe(Condition.exist, Condition.visible);
     }
 }

@@ -1,14 +1,13 @@
 package org.example;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import pages.LoginPage;
-
-import static com.codeborne.selenide.Selenide.*;
 
 // Task 18
 public class Homework18Login {
@@ -23,7 +22,7 @@ public class Homework18Login {
 
     @BeforeEach
     public void setUp(){
-        open(setupFunctions.getBaseUrlWeb());
+        Selenide.open(setupFunctions.getBaseUrlWeb());
     }
 
     @BeforeEach
@@ -33,7 +32,7 @@ public class Homework18Login {
 
     @AfterEach
     public void tearDown(){
-        closeWebDriver();
+        Selenide.closeWebDriver();
     }
 
     // 1.1. Login with incorrect data and check an error
@@ -74,8 +73,8 @@ public class Homework18Login {
 //
 //        $(By.xpath("//button[@data-name='signIn-button']")).click();
 
-        $(By.xpath("//button[@data-name='createOrder-button']")).shouldBe(Condition.exist, Condition.visible);
-        $(By.xpath("//button[@data-name='openStatusPopup-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@data-name='createOrder-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@data-name='openStatusPopup-button']")).shouldBe(Condition.exist, Condition.visible);
     }
 
     // Login with incorrect data and check an error and repeat successful login
@@ -96,9 +95,9 @@ public class Homework18Login {
 //
 //        $(By.xpath("//button[@data-name='signIn-button']")).click();
 
-        $(By.xpath("//button[@data-name='authorizationError-popup-close-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@data-name='authorizationError-popup-close-button']")).shouldBe(Condition.exist, Condition.visible);
 
-        $(By.xpath("//button[@data-name='authorizationError-popup-close-button']")).click();
+        Selenide.$(By.xpath("//button[@data-name='authorizationError-popup-close-button']")).click();
 
         loginPage.locateUsernameAndInsertText(setupFunctions.getUsername());
         loginPage.locatePasswordAndInsertText(setupFunctions.getPassword());
@@ -110,7 +109,7 @@ public class Homework18Login {
 //
 //        $(By.xpath("//button[@data-name='signIn-button']")).click();
 
-        $(By.xpath("//input[@data-name='phone-input']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//input[@data-name='phone-input']")).shouldBe(Condition.exist, Condition.visible);
 
     }
 

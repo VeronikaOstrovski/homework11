@@ -2,14 +2,12 @@ package org.example;
 
 import com.google.gson.Gson;
 import dto.RandomUser;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
-
-import java.util.Random;
 
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
@@ -40,7 +38,7 @@ public class CreatedUser {
         randomUserEmpty.setUserStatus(12);
 
         Gson gson = new Gson();
-        given()
+        RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .body(gson.toJson(randomUserEmpty))
@@ -93,7 +91,7 @@ public class CreatedUser {
 
 
         Gson gsonDeserialization = new Gson();
-        Response responseDeserialization = given()
+        Response responseDeserialization = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .body(gsonDeserialization.toJson(randomUserEmptyDeserialization))
@@ -109,12 +107,12 @@ public class CreatedUser {
 
         RandomUser createdUser = gsonDeserialization.fromJson(responseDeserialization.asString(), RandomUser.class);
 
-        assertAll ( "Asserts for CreateUser",
-                () -> assertEquals(HttpStatus.SC_OK, createdUser.getCode(), "First Assert"),
+        Assertions.assertAll ( "Asserts for CreateUser",
+                () -> Assertions.assertEquals(HttpStatus.SC_OK, createdUser.getCode(), "First Assert"),
        //         () -> assertNull( createdUser.getFirstName(), "Second Assert"),
-                () -> assertEquals("8", createdUser.getMessage(), "Third Assert"),
+                () -> Assertions.assertEquals("8", createdUser.getMessage(), "Third Assert"),
        //         () -> assertNotEquals(generatedRandomPhone(),createdUser.getPhone(),"FourthAssert"),
-                () -> assertNotNull(createdUser.getType(),"Fifth Assert")
+                () -> Assertions.assertNotNull(createdUser.getType(),"Fifth Assert")
         );
     }
 

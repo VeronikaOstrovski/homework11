@@ -1,10 +1,10 @@
 package org.example;
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 import pages.LoginPage;
 import pages.OrderPage;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 
@@ -22,7 +22,7 @@ public class Homework19Order {
 
     @BeforeEach
     public void setUp(){
-        open(setupFunctions.getBaseUrlWeb());
+        Selenide.open(setupFunctions.getBaseUrlWeb());
     }
 
     @BeforeEach
@@ -37,7 +37,7 @@ public class Homework19Order {
 
     @AfterEach
     public void tearDown(){
-        closeWebDriver();
+        Selenide.closeWebDriver();
     }
 
     // 3.1. Creating an order

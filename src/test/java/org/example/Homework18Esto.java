@@ -2,6 +2,7 @@ package org.example;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -16,13 +17,13 @@ public class Homework18Esto {
     public void buttonLogiSisseActiveMobiilId(){
 
         Configuration.browser="safari";
-        open("https://profile.esto.ee/login/mobile-id");
+        Selenide.open("https://profile.esto.ee/login/mobile-id");
 
-        $(By.xpath("//*[@id='phone-field']/ ..//input[@class='esto-text-input-container__input']")).setValue("+37258066606");
-        $(By.xpath("//*[@id='pin-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
+        Selenide.$(By.xpath("//*[@id='phone-field']/ ..//input[@class='esto-text-input-container__input']")).setValue("+37258066606");
+        Selenide.$(By.xpath("//*[@id='pin-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
 //        $(By.xpath("//*[@id='pin-field']/ ..//input")).setValue("48812050267");
 
-        $(By.xpath("//button[@estocypressdata='mobile-id-login-button']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@estocypressdata='mobile-id-login-button']")).shouldBe(Condition.exist, Condition.visible);
     }
 
     // 2. Successful login Smart-ID
@@ -30,11 +31,11 @@ public class Homework18Esto {
     public void buttonLogiSisseActiveSmartId(){
 
         System.setProperty("selenide.browser","safari");
-        open ("https://profile.esto.ee/login/smart-id");
+        Selenide.open ("https://profile.esto.ee/login/smart-id");
 
-        $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
+        Selenide.$(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("48812050267");
 
-        $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist,Condition.visible);
+        Selenide.$(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist,Condition.visible);
     }
 
     // 3. Successful login Parol
@@ -42,12 +43,12 @@ public class Homework18Esto {
     public void buttonLogiSisseActiveParool(){
 
         System.setProperty("selenide.browser","safari");
-        open("https://profile.esto.ee/login/password");
+        Selenide.open("https://profile.esto.ee/login/password");
 
-        $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("Login-test");
-        $(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue("Parool-test");
+        Selenide.$(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("Login-test");
+        Selenide.$(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue("Parool-test");
 
-        $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).shouldBe(Condition.exist, Condition.visible);
     }
 
     // 4. Unsuccessful login Smart-ID
@@ -55,13 +56,13 @@ public class Homework18Esto {
     public void errorForUnsuccessfulLoginSmartId (){
 
         System.setProperty("selenide.browser", "safari");
-        open("https://profile.esto.ee/login/smart-id");
+        Selenide.open("https://profile.esto.ee/login/smart-id");
 
-        $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("488120502677");
+        Selenide.$(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("488120502677");
 
-        $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
+        Selenide.$(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
 
-        $(By.xpath("//*[@class='error-text ng-star-inserted']")).shouldBe(Condition.exist, Condition.visible);
+        Selenide.$(By.xpath("//*[@class='error-text ng-star-inserted']")).shouldBe(Condition.exist, Condition.visible);
     }
 
     // 5. Unsuccessful login Parool
@@ -69,14 +70,14 @@ public class Homework18Esto {
     public void errorForUnsuccessfulLoginParool (){
 
         Configuration.browser="safari";
-        open("https://profile.esto.ee/login/password");
+        Selenide.open("https://profile.esto.ee/login/password");
 
-        $(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("");
-        $(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue(" ");
+        Selenide.$(By.xpath("//*[@id='login-field']/..//input[@class='esto-text-input-container__input']")).setValue("");
+        Selenide.$(By.xpath("//*[@id='password-field']/..//input[@class='esto-text-input-container__input']")).setValue(" ");
 
-        $(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
+        Selenide.$(By.xpath("//button[@class='form-button esto-button esto-button__accent']")).click();
 
-        $(By.xpath("//span[@class='ng-star-inserted']")).shouldBe(Condition.exist,Condition.visible);
+        Selenide.$(By.xpath("//span[@class='ng-star-inserted']")).shouldBe(Condition.exist,Condition.visible);
     }
 
 }

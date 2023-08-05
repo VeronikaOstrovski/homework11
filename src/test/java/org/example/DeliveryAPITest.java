@@ -2,24 +2,14 @@ package org.example;
 
 import com.google.gson.Gson;
 import dto.Order;
-import dto.User;
 import io.restassured.RestAssured;
-import io.restassured.internal.RestAssuredResponseImpl;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.http.HttpStatus;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import javax.swing.text.AbstractDocument;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.CoderResult;
-import java.util.Properties;
 
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
@@ -53,7 +43,7 @@ public class DeliveryAPITest {
         Order newOrder = new Order(0, "Today", "+37255577788", "good day", 0);
         Gson gson = new Gson();
 
-        given()
+        RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -76,7 +66,7 @@ public class DeliveryAPITest {
         Order createdOrder = new Order(0, "Saturday", "+372", "good day", 0);
         Gson createdGson = new Gson();
 
-        Response response = given()
+        Response response = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -102,7 +92,7 @@ public class DeliveryAPITest {
 
         int orderIdCreated = createOrderForSearchingAndDeleting();
 
-        String status = given()
+        String status = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -128,7 +118,7 @@ public class DeliveryAPITest {
 
         int orderIdCreated = createOrderForSearchingAndDeleting();
 
-        String body = given()
+        String body = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -149,7 +139,7 @@ public class DeliveryAPITest {
 
         // Searched a deleted order
 
-        String bodyIsEmpty = given()
+        String bodyIsEmpty = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -176,7 +166,7 @@ public class DeliveryAPITest {
 
         int orderIdCreated = createOrderForSearchingAndDeleting();
 
-        given()
+        RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
 //                .header("Authorization", "Bearer " + token)
@@ -200,7 +190,7 @@ public class DeliveryAPITest {
         Order orderForNegativeTest = new Order(0, "Wednesday", "+37299988877", "sunny", 0);
         Gson gsonForNegativeTest = new Gson();
 
-        String headerContentType = given()
+        String headerContentType = RestAssured.given()
                 .when()
 //                .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -225,7 +215,7 @@ public class DeliveryAPITest {
     @Test
     public void availableOrdersRoleStudent() {
 
-        Response response = given()
+        Response response = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -249,7 +239,7 @@ public class DeliveryAPITest {
         Order statusOrderRoleStudent = new Order(0, "Tuesday", "+37211122233", "hello", 0);
         Gson gsonStatusOrderRoleStudent = new Gson();
 
-        Response response = given()
+        Response response = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -271,7 +261,7 @@ public class DeliveryAPITest {
     @Test
     public void deleteArrayOrders() {
 
-        Order[] ordersArray = given()
+        Order[] ordersArray = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)
@@ -290,7 +280,7 @@ public class DeliveryAPITest {
             for (int i = 0; i < ordersArray.length; i++) {
 
                 System.out.println("Deleting order with id: " + ordersArray[i].getId());
-                Response response = given()
+                Response response = RestAssured.given()
                         .when()
                         .header("Content-Type", "application/json")
                         .header("Authorization", "Bearer " + token)
@@ -355,7 +345,7 @@ public class DeliveryAPITest {
         Order[] generatedOrderArray = {generatedOrder, generatedOrder, generatedOrder};
         for (int i = 0; i < generatedOrderArray.length; i++)
 
-            given()
+            RestAssured.given()
                     .when()
                     .header("Content-Type", "application/json")
                     .header("Authorization", "Bearer " + token)
@@ -370,7 +360,7 @@ public class DeliveryAPITest {
 
         Assertions.assertNotNull(generatedOrder.getId());
 
-        Order[] checkNewCreatedOrders = given()
+        Order[] checkNewCreatedOrders = RestAssured.given()
                 .when()
                 .header("Content-Type", "application/json")
                 .header("Authorization", "Bearer " + token)

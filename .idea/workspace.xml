@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="Task 19 done:&#10;1.1. Did pattern page object for LoginPage and did Before / After for testing all tests&#10;1.2. Did pattern page object for TallinnDelivery and did Before / After for testing all tests&#10;2.1 Did tests with command mvn test -Dtest=Homework18Test&#10;2.2 Did tests with command mvn test -Dtest=Homework18Test -Dselenide.browser=safari&#10;3.1. Created page object for OrderPage&#10;3.2. Added tests for creating and searching created order">
+    <list default="true" id="47502551-9b62-4697-b130-81c13727920f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/Homework21Integration/FieldsForCreateOrder.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/db/DbManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CreateOrderAtApiWithRandomData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/HW21CreatedOrderAtApiAndCheckAtWebAndDb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/settings.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DivideNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DivideNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CreatedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CreatedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DeliveryWebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18Esto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Esto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework18Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework18Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/Homework19Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/Homework19Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TestDivideNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TestDivideNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OrderPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,108 +51,134 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/veronikaostrovski/IdeaProjects/homework11&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/veronikaostrovski/IdeaProjects/homework11&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="db" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src/test/java/org/example" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/target" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example" />
+      <recent name="org" />
+      <recent name="test" />
+      <recent name="db" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Scanner.Console">
+  <component name="RunManager" selected="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb">
     <configuration name="Array" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Array" />
+      <option name="PACKAGE_NAME" value="example" />
+      <option name="MAIN_CLASS_NAME" value="example.Array" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Array.testNegativeArrayIndex6OutOfBoundsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HW21CreatedOrderAtApiAndCheckAtWebAndDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework11" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="Homework21Integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Array" />
-      <option name="METHOD_NAME" value="testNegativeArrayIndex6OutOfBoundsException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Array.testNegativeArrayIndex7OutOfBoundsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Array" />
-      <option name="METHOD_NAME" value="testNegativeArrayIndex7OutOfBoundsException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scanner.Console" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Scanner" />
-      <option name="METHOD_NAME" value="Console" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestDivideNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.TestDivideNumbers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HW21CreatedOrderAtApiAndCheckAtWebAndDb.connectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
+      <option name="METHOD_NAME" value="connectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HW21CreatedOrderAtApiAndCheckAtWebAndDb.setUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
+      <option name="METHOD_NAME" value="setUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HW21CreatedOrderAtApiAndCheckAtWebAndDb.toCheckCreatedOrderFromApiToWeb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework21Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
+      <option name="METHOD_NAME" value="toCheckCreatedOrderFromApiToWeb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HW21CreatedOrderAtApiAndCheckAtWebAndDb.toCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework21Integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
+      <option name="METHOD_NAME" value="toCreateOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Scanner.Console" />
-        <item itemvalue="JUnit.Array" />
-        <item itemvalue="JUnit.Array.testNegativeArrayIndex7OutOfBoundsException" />
-        <item itemvalue="JUnit.Array.testNegativeArrayIndex6OutOfBoundsException" />
-        <item itemvalue="JUnit.TestDivideNumbers" />
+        <item itemvalue="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb" />
+        <item itemvalue="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb.toCheckCreatedOrderFromApiToWeb" />
+        <item itemvalue="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb.setUp" />
+        <item itemvalue="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb.connectionTest" />
+        <item itemvalue="JUnit.HW21CreatedOrderAtApiAndCheckAtWebAndDb.toCreateOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -376,6 +411,17 @@
     <option name="localTasksCounter" value="32" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Task done" />
     <MESSAGE value="Task 12 done" />
@@ -413,16 +459,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>147</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
-          <line>168</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/SetupFunctions.java</url>
           <line>93</line>
           <option name="timeStamp" value="50" />
@@ -457,12 +493,26 @@
           <line>25</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/IntegrationTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/db/DbManager.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/DeliveryAPITest.java</url>
           <line>388</line>
           <properties field="checkNewCreatedOrders" class="org.example.DeliveryAPITest" />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoSuchMethodError" package="java.lang" />
+          <option name="timeStamp" value="105" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

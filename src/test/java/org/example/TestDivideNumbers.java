@@ -33,7 +33,7 @@ public class TestDivideNumbers {
     //Negative test divide two numbers (-15/0)
     @Test
     public void testNegativeDivideTwoNumbers15And0AndReturnsCorrectResult() {
-        assertThrows(ArithmeticException.class, () -> {
+        Assertions.assertThrows(ArithmeticException.class, () -> {
             divideNumbers.divideTwoNumbers(-15, 0);
         });
         }

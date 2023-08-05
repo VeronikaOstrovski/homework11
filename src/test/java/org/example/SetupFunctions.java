@@ -2,7 +2,7 @@ package org.example;
 
 import com.google.gson.Gson;
 import dto.User;
-import org.junit.jupiter.api.Test;
+import io.restassured.RestAssured;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,6 +18,11 @@ public class SetupFunctions {
     private String password;
     private String baseUrl;
     private String baseUrlWeb;
+    private String dbhost;
+    private String dbport;
+    private String dbname;
+    private String dbusername;
+    private String dbpassword;
 
     public String getUsername() {
         return username;
@@ -43,6 +48,49 @@ public class SetupFunctions {
         this.baseUrl = baseUrl;
     }
 
+    public String getDbhost() {
+        return dbhost;
+    }
+
+    public String getDbport() {
+        return dbport;
+    }
+
+    public String getDbname() {
+        return dbname;
+    }
+
+    public String getDbusername() {
+        return dbusername;
+    }
+
+    public String getDbpassword() {
+        return dbpassword;
+    }
+
+    public void setBaseUrlWeb(String baseUrlWeb) {
+        this.baseUrlWeb = baseUrlWeb;
+    }
+
+    public void setDbhost(String dbhost) {
+        this.dbhost = dbhost;
+    }
+
+    public void setDbport(String dbport) {
+        this.dbport = dbport;
+    }
+
+    public void setDbname(String dbname) {
+        this.dbname = dbname;
+    }
+
+    public void setDbusername(String dbusername) {
+        this.dbusername = dbusername;
+    }
+
+    public void setDbpassword(String dbpassword) {
+        this.dbpassword = dbpassword;
+    }
 
     // Task 13
     public SetupFunctions() {
@@ -55,6 +103,12 @@ public class SetupFunctions {
             username = properties.getProperty("username");
             password = properties.getProperty("password");
             baseUrlWeb = properties.getProperty("baseUrlWeb");
+            dbhost = properties.getProperty("dbhost");
+            dbport = properties.getProperty("dbport");
+            dbname = properties.getProperty("dbname");
+            dbusername = properties.getProperty("dbusername");
+            dbpassword = properties.getProperty("dbpassword");
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -77,7 +131,7 @@ public class SetupFunctions {
         Gson gson = new Gson();
         String credentials = gson.toJson(user);
 
-        String token = given()
+        String token = RestAssured.given()
                 .header("Content-Type", "application/json")
                 .log()
                 .all()

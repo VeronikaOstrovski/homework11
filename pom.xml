@@ -53,7 +53,6 @@
       <scope>test</scope>
     </dependency>
 
-
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
     <dependency>
       <groupId>org.apache.commons</groupId>
@@ -76,45 +75,11 @@
       <version>6.13.0</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-console -->
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
-      <groupId>org.junit.platform</groupId>
-      <artifactId>junit-platform-console</artifactId>
-      <version>1.10.0</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.apache.geronimo.modules/geronimo-converter -->
-    <dependency>
-      <groupId>org.apache.geronimo.modules</groupId>
-      <artifactId>geronimo-converter</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.apache.karaf.shell/org.apache.karaf.shell.console -->
-    <dependency>
-      <groupId>org.apache.karaf.shell</groupId>
-      <artifactId>org.apache.karaf.shell.console</artifactId>
-      <version>4.4.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dorkbox</groupId>
-      <artifactId>Console</artifactId>
-      <version>3.8</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dorkbox</groupId>
-      <artifactId>Console</artifactId>
-      <version>3.8</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dorkbox</groupId>
-      <artifactId>Console</artifactId>
-      <version>3.8</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dorkbox</groupId>
-      <artifactId>Console</artifactId>
-      <version>3.8</version>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.6.0</version>
     </dependency>
 
 

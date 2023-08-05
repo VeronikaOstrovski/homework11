@@ -1,8 +1,6 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
-import org.example.SetupFunctions;
-import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -44,8 +42,8 @@ public class OrderPage {
         $(By.xpath("//button[@data-name='openStatusPopup-button']")).click();
     }
 
-    public void fieldSearchOrder (String number){
-        $(By.xpath("//input[@data-name='searchOrder-input']")).setValue(number);
+    public void fieldSearchOrder (String value){
+        $(By.xpath("//input[@data-name='searchOrder-input']")).setValue(value);
     }
 
     public void clickButtonSearchOrder(){
